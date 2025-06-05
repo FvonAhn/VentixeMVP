@@ -879,7 +879,6 @@ title {
         height: 132px;
         width: 644px;
         background-color: var(--Grey-10);
-        border: solid 1px var(--CoolGrey-100);
         border-radius: 16px;
         cursor: pointer;
     }
@@ -1035,7 +1034,6 @@ title {
         grid-template-rows: auto auto;
         justify-content: space-between;
         background-color: var(--Grey-10);
-        border: solid 1px var(--CoolGrey-100);
         border-radius: 16px;
         cursor: pointer;
     }

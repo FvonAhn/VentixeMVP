@@ -1,23 +1,36 @@
 import BarChart from '../images/BarChart.svg';
 
-function EventCard () {
+function EventCard ({event}) {
+
+    const dateTime = new Date(event.date);
+    const date = dateTime.toLocaleDateString('sv-SE', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    });
+
+    const time = dateTime.toLocaleTimeString('sv-SE', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
     return (
         <div className="event-card">
             <div className="event-img">
         
             </div>
             <div className="event-info">
-                <div className="event-type">Event Type Here</div>
-                <div className="event-name">Name of Event</div>
-                <div className="event-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas doloribus totam repellendus quos excepturi possimus! Illum voluptatem assumenda qui. A quaerat optio ad quasi.</div> 
+                <div className="event-type">{event.category}</div>
+                <div className="event-name">{event.name}</div>
+                <div className="event-description">{event.description}</div> 
                 <div className="event-where-time">
                     <div className="event-where">
                         <i className="fa-regular fa-map"></i>
-                        <p>Stortorget, Örebro</p>
+                        <p>{event.location}</p>
                     </div>
                     <div className="event-time">
                         <i className="fa-regular fa-calendar"></i>
-                        <p>16 Juli, 2025 - 21:00</p>
+                        <p>{date} - {time}</p>
                     </div>
                 </div>
             </div>
