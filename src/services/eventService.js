@@ -1,4 +1,4 @@
-const API_BASE = ""
+const API_BASE = "https://localhost:7035"
 
 export async function getAllEvents() {
     const response = await fetch(`${API_BASE}/api/events`)

@@ -1,6 +1,7 @@
 import BarChart from '../images/BarChart.svg';
 
 function EventCard ({event}) {
+    if(!event) return null;
 
     const dateTime = new Date(event.date);
     const date = dateTime.toLocaleDateString('sv-SE', {
