@@ -209,12 +209,12 @@ title {
 
 .main-header {
     width: 1133px;
-    height: 36px;
+    height: 60px;
 }
 .main-header-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
 }   
 .main-header-filters {
     display: flex;
@@ -473,6 +473,17 @@ title {
             font-size: 14px;
         }
 
+    .main-create-btn {
+        padding: 12px ;
+        color: var(--CoolGrey-10);
+        background-color: var(--Secondary-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+        
 /* #endregion */
 
 /* #region Calender */
@@ -776,6 +787,33 @@ title {
 /* #endregion */
 
 /* #region Tables */
+/* #endregion */
+
+/* #region PlaceHolders */
+
+.main-right-placeholder1 {
+    color: var(--CoolGrey-10);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-right-placeholder2 {
+    color: var(--Grey-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-right-placeholder6 {
+    color: var(--Grey-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 /* #endregion */
 
 /* #region Media Queries */

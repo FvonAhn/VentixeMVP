@@ -2,11 +2,12 @@ import EventNav from "./EventNav"
 import VentixeLogo from "./VentixeLogo"
 
 
-function Sidebar () {
+function Sidebar ({ setActiveView, activeView }) {
+
     return (
         <section className="sidebar">
             <VentixeLogo />
-            <EventNav />
+            <EventNav setActiveView={setActiveView} activeView={activeView} />
         </section>
     )
 }

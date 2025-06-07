@@ -1,14 +1,13 @@
 import { useState } from 'react';
 
-function EventNav () {
-    const [isActive, setIsActive] = useState(false);
+function EventNav ({ setActiveView, activeView }) {
 
     const handleClick = () => {
-        setIsActive(!isActive);
+        setActiveView(activeView === "events" ? "" : "events");
     };
 
     return (
-        <div className={`sidebar-navs ${isActive ? 'active' : ''}`}
+        <div className={`sidebar-navs ${activeView === "events" ? 'active' : ''}`}
         onClick={handleClick}
         >
             <div className="sidebar-navs-box">

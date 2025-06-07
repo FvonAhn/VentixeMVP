@@ -1,11 +1,27 @@
+import { useState } from "react"
 import EventList from "./EventList"
 import MainHeader from "./MainHeader"
+import EventForm from "./EventForm"
 
-function Maincomp () {
+function Maincomp ({activeView}) {
+    const [showCreateForm, setShowCreateForm] = useState(false);
+
+    const renderContent = () => {
+        if (activeView === "events") {
+            return showCreateForm ? (
+                <EventForm onCancel = {() => setShowCreateForm(false)} />
+            ) : (
+                <EventList onCreateClick={() => setShowCreateForm(true)} />
+            );
+        }
+
+        return <p></p>
+    };
+
     return (
         <section className="main">
             <MainHeader />
-            <EventList />
+            {renderContent()}
         </section>
     )
 }

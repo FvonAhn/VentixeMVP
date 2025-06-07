@@ -1,16 +1,19 @@
-import Sidebar from "./components/sidebar"
+import { useState } from "react"
+import Sidebar from "./components/Sidebar"
 import Header from "./components/Header"
 import Maincomp from "./components/Maincomp"
 import Footer from "./components/Footer"
 
 
 function App() {
+  const [activeView, setActiveView] = useState("")
+
   return (
     <div className="siteSize">
         <div className="site-container">
-          <Sidebar />
+          <Sidebar setActiveView={setActiveView} activeView={activeView}/>
           <Header />
-          <Maincomp />
+          <Maincomp activeView={activeView} />
           <Footer />
         </div>
     </div>
