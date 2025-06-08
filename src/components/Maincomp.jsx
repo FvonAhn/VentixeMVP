@@ -4,8 +4,6 @@ import MainHeader from "./MainHeader"
 import EventForm from "./EventForm"
 
 function Maincomp ({activeView}) {
-    const [showCreateForm, setShowCreateForm] = useState(false);
-
     const renderContent = () => {
         if (activeView === "events") {
             return showCreateForm ? (
@@ -20,7 +18,7 @@ function Maincomp ({activeView}) {
 
     return (
         <section className="main">
-            <MainHeader />
+            <MainHeader activeView={activeView} showCreateForm={showCreateForm} onCreateClick={() => setShowCreateForm(true)}/>
             {renderContent()}
         </section>
     )

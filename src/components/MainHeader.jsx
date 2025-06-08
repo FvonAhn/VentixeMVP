@@ -1,10 +1,10 @@
 import CreateEventBtn from "./CreateEventBtn"
 
-function MainHeader () {
+function MainHeader ({activeView}) {
     return (
         <div className="main-header">
             <div className="main-header-box">
-                <CreateEventBtn />
+                {activeView === "events" && <CreateEventBtn />}
             </div>
         </div>
     )
