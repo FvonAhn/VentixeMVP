@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
 function EventNav ({ setActiveView, activeView }) {
 
     const handleClick = () => {
-        setActiveView(activeView === "events" ? "" : "events");
+        setActiveView(prev => (prev === "events" ? "none" : "events"));
     };
 
     return (
