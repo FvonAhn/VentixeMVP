@@ -1,8 +1,10 @@
+import CreateEventBtn from "./CreateEventBtn"
+
 function MainHeader () {
     return (
         <div className="main-header">
             <div className="main-header-box">
-                <div className="main-create-btn">Create Event</div>
+                <CreateEventBtn />
             </div>
         </div>
     )

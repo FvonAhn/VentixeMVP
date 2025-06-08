@@ -482,6 +482,24 @@ title {
         justify-content: center;
         border-radius: 16px;
         cursor: pointer;
+        border: none;
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        font-size: 18px;
+        font-weight: var(--font-medium);
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        background-color: transparent;
+        border-radius: 16px;
+        cursor: pointer;
+        padding: 10px 15px;
+    }
+    .modal-close-btn:hover {
+        color: white;
+        background-color: var(--background-modal);
     }
         
 /* #endregion */
@@ -680,8 +698,11 @@ title {
 /* #region Forms */
 
 .modal-form-background {
-    height: 100%;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -691,6 +712,7 @@ title {
 }
 
 .form-container {
+    position: relative;
     background-color: var(--CoolGrey-20);
     height: fit-content; 
     width: fit-content; 
@@ -700,7 +722,6 @@ title {
     justify-content: center;
     padding: 40px;
     border-radius: 16px;
-    border: solid 1px var(--border);
 }
 .form-header {
     color: var(--Secondary-110);
